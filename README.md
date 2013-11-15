@@ -49,11 +49,13 @@ syntax
  
 pre-defined vars
 ===========
- - file_name
- - file_path
+ - filename
+ - dirname
+ - filepath
  - datetime
  - platform
  - arch
+ - ext
  
 changelog
 ===========

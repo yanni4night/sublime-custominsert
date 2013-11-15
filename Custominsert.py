@@ -21,14 +21,21 @@ class CustominsertCommand(sublime_plugin.TextCommand):
     def get_predefined_param(self,match):
         '''{%%}'''
         key=match.group(1)
-        if key=='file_name':
+        if key=='filename':
             return os.path.basename(self.view.file_name() or '')
-        elif key=='file_path':
+        elif key=='filepath':
             return self.view.file_name() or ''
+        elif key=='dirname':
+            return os.path.dirname(self.view.file_name() or '')
         elif key=='platform':
             return sublime.platform()
         elif key=='arch':
             return sublime.arch()
+        elif key=='ext':
+            ext=os.path.splitext(self.view.file_name() or '')[1]
+            #remove . at start position
+            p=re.compile('^\.')
+            return re.sub(p,'',ext)
         elif key=='datetime':
             t=datetime.datetime.today()  
             return t.strftime(self.get_action_param('datetime_format','%Y-%m-%d %H:%M:%S'))
@@ -53,10 +60,10 @@ class CustominsertCommand(sublime_plugin.TextCommand):
         self.action=action;
         content=self.get_action_param('content')
         #replace {%%}
-        p=re.compile('\{%\s*?([\w]+)\s*?%\}')
+        p=re.compile('\{%\s*?([\w]+)\s*?%\}',re.LOCALE|re.MULTILINE)
         content=re.sub(p,self.get_predefined_param,content)
         #replace {{}}
-        p=re.compile('\{\{\s*?([\w]+)\s*?\}\}')
+        p=re.compile('\{\{\s*?([\w]+)\s*?\}\}',re.LOCALE|re.MULTILINE)
         content=re.sub(p,self.get_defined_param,content)
         #insert position
         if 'start'==self.get_action_param('position'):

@@ -14,7 +14,7 @@
             "position": "cursor"
         },
         "copyright": {
-            "content": "/**\n  * {%file_name%}\n  *\n  * {%platform%}-{%arch%}\n  *\n  * changelog\n  * {%datetime%}:created\n  *\n  * @author {{author}}\n  * @version {{version}}\n  */\n",
+            "content": "/**\n  * {%filename%}\n  *\n  * {%platform%}-{%arch%},{%ext%},{%dirname%}\n  *\n  * changelog\n  * {%datetime%}:created\n  *\n  * @author {{author}}\n  * @version {{version}}\n  */\n",
             "position": "start",
             "data":{
                 "author":"yinyong"
