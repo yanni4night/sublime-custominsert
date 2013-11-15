@@ -2,5 +2,6 @@
     "author":"yinyong#sogou-inc.com",
     "version":"0.0.1",
     "__content__":"/**\n  * {%file_name%}\n  *\n  * @author {{author}}\n  * @datetime {%datetime%}\n  * @version {{version}}\n  */\n",
-    "__position__":"start"/*cursor*/
+    "__position__":"start",/*cursor*/
+    "__datetime_format__":"%Y-%m-%d[%H:%M:%S]"
 }
