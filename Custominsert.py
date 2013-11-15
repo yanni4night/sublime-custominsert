@@ -58,4 +58,5 @@ class CustominsertCommand(sublime_plugin.TextCommand):
         if 'start'==self.get_action_param('position'):
             v.insert(edit, 0, content)
         else:
-            v.insert(edit,v.sel()[0].begin(), content)
+            for sel in v.sel():
+                v.insert(edit,sel.begin(), content)
