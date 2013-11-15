@@ -25,6 +25,8 @@ class CustominsertCommand(sublime_plugin.TextCommand):
             return os.path.basename(self.view.file_name() or '')
         elif key=='file_path':
             return self.view.file_name() or ''
+        elif key=='os':
+            return sublime.platform()
         elif key=='datetime':
             t=datetime.datetime.today()  
             return t.strftime(self.get_action_param('datetime_format','%Y-%m-%d %H:%M:%S'))
