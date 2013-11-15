@@ -52,6 +52,8 @@ pre-defined vars
  - file_name
  - file_path
  - datetime
+ - platform
+ - arch
  
 changelog
 ===========
