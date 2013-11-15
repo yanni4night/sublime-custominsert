@@ -14,7 +14,7 @@
             "position": "cursor"
         },
         "copyright": {
-            "content": "/**\n  * {%filename%}\n  *\n  * changelog\n  * {%datetime%}:created\n  *\n  * @info {%user%},{%platform%}-{%arch%},{%ip%},{%ext%},{%dirname%}\n  * @author {{author}}\n  * @version {{version}}\n  * @since {{version}}\n  */\n",
+            "content": "/**\n  * {%filename%}\n  *\n  * changelog\n  * {%datetime%}:created\n  *\n  * @info {%user%},{%platform%}-{%arch%},{%encoding%},{%ip%},{%ext%},{%dirname%}\n  * @author {{author}}\n  * @version {{version}}\n  * @since {{version}}\n  */\n",
             "position": "start",
             "data":{
                 "author":"yanni4night@gmail.com"
