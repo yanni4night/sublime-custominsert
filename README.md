@@ -1,7 +1,7 @@
 sublime-custominsert
 ====================
 
-A sublime 2 plugin that can easily insert custom content.
+A [sublime 2](http://www.sublimetext.com/) plugin that can easily insert custom content.
 
 configuration
 ===========
@@ -15,7 +15,7 @@ _Custominsert.sublime-keymap:_
         "content":"Nohting to insert",
         
         /*Default date_format*/
-        "date_format":"%Y-%m-%d[%H:%M:%S]",
+        "date_format":"%Y-%m-%d %H:%M:%S",
         
         /*Default insert position*/
         "position":"cursor",
@@ -28,7 +28,7 @@ _Custominsert.sublime-keymap:_
         	"copyright":{
         		"content":"/**\n  * {%file_name%}\n  *\n  * @author {{author}}\n  * @datetime {%datetime%}\n  * @version {{version}}\n  */\n",
         		"data":{
-        			"author":"yanni4night@gmail.com",
+        			"author":"yanni4night",
         			"version":"0.0.1"
         		}
         	}
@@ -44,21 +44,24 @@ _Default (OSX).sublime-keymap:_
 	
 syntax
 ===========
- - {%var%}:pre-defined vars
- - {{var}}:custom defined vars in _data_ dict
+ - {%var%}:[pre-defined variables](#pre-defined-vars).
+ - {{var}}:custom defined variables in _data_ dict.
  
 pre-defined vars
 ===========
- - filename
- - dirname
- - filepath
- - datetime
- - platform
- - arch
- - ext
+ - filename : file name with ext
+ - dirname : absolute directory path
+ - filepath : absolute file path
+ - datetime : date&time
+ - platform : 'osx','linux' or 'windows'
+ - arch : 'x32' or 'x64'
+ - ext : file ext(without '.',may be empty)
+ - ip : IP address(may be 'localhost')
+ - encoding : file encoding(may be Undefined)
+ - user : name of the user logged in
  
 changelog
 ===========
- - 2013-11-15:{{}} syntax supported;position custom define supported;multiple actions&position insert supported.
- - 2013-11-15:{%%} syntax supported.
+ - 2013-11-15:{{}} syntax supported;position custom define supported;multiple actions&position insert supported,more pre-defined supported.
+ - 2013-11-14:{%%} syntax supported.
 
