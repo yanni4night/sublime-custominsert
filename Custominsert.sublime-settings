@@ -1,6 +1,6 @@
 {
     "data": {
-        "author": "yanni4night#gmail.com",/*default author*/
+        "author": "yanni4night",/*default author*/
         "version": "0.0.1"/*default version*/
     },
     "content": "default content",
@@ -14,10 +14,10 @@
             "position": "cursor"
         },
         "copyright": {
-            "content": "/**\n  * {%filename%}\n  *\n  * {%platform%}-{%arch%},{%ext%},{%dirname%}\n  *\n  * changelog\n  * {%datetime%}:created\n  *\n  * @author {{author}}\n  * @version {{version}}\n  */\n",
+            "content": "/**\n  * {%filename%}\n  *\n  * changelog\n  * {%datetime%}:created\n  *\n  * @info {%user%},{%platform%}-{%arch%},{%ip%},{%ext%},{%dirname%}\n  * @author {{author}}\n  * @version {{version}}\n  * @since {{version}}\n  */\n",
             "position": "start",
             "data":{
-                "author":"yinyong"
+                "author":"yanni4night@gmail.com"
             }
         }
 

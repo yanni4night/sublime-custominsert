@@ -5,7 +5,18 @@
 #version 0.0.1
 
 import sublime, sublime_plugin
-import re,datetime,os
+import re,datetime,os,socket
+
+
+def get_local_ip():
+    '''Stupid way to get IP address'''
+    try:
+        s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+        s.connect(('w3.org',80))
+        return s.getsockname()[0]
+    except Exception, e:
+        return '127.0.0.1'
+
 
 class CustominsertCommand(sublime_plugin.TextCommand):
 
@@ -31,6 +42,25 @@ class CustominsertCommand(sublime_plugin.TextCommand):
             return sublime.platform()
         elif key=='arch':
             return sublime.arch()
+        elif key=='ip':
+            return get_local_ip()
+            ipaddrlist=socket.gethostbyname_ex(socket.gethostname())
+            ips=''
+            for e in ipaddrlist:
+                if isinstance(e,list):
+                    for k in e:
+                        ips+=" "+k
+                else:
+                    ips+=e
+            return ips
+        elif key=='user':
+            user=os.getlogin()
+            if user:
+                return user
+                #windows?
+            user=os.popen('whoami').read()
+            p=re.compile('[\r\n]',re.M)
+            return re.sub(p,'',user)
         elif key=='ext':
             ext=os.path.splitext(self.view.file_name() or '')[1]
             #remove . at start position
