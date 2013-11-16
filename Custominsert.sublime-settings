@@ -19,6 +19,14 @@
             "data":{
                 "author":"yanni4night@gmail.com"
             }
+        },
+        "html":{
+            "content":"<!DOCTYPE html>\n<html>\n<head>\n<meta charset=\"{{charset}}\"/>\n<title>{{title}}</title>\n<script type=\"application/javascript\"></script>\n<style type=\"text/css\"></style>\n</head>\n<body></body>\n</html>\n",
+            "position":"start",
+            "data":{
+                "title":"Auto Insert",
+                "charset":"utf-8"
+            }
         }
 
     }
