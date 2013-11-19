@@ -1,0 +1,8 @@
+[{
+    "id": "insert_copyright",
+    "command": "custominsert",
+    "args": {
+        "action": "copyright"
+    },
+    "caption": "Insert Copyright"
+}]
