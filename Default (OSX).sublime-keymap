@@ -1,5 +1,6 @@
 [
     { "keys": ["ctrl+c"], "command": "custominsert", "args": {"action":"copyright"} },
     { "keys": ["ctrl+t"], "command": "custominsert", "args": {"action":"datetime"} },
-    { "keys": ["ctrl+l"], "command": "custominsert", "args": {"action":"html"} }
+    { "keys": ["ctrl+l"], "command": "custominsert", "args": {"action":"html"} },
+    { "keys": ["ctrl+i"], "command": "custominsert", "args": {"action":"me"} }
 ]
