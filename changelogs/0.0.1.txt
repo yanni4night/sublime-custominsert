@@ -1,0 +1,12 @@
+Custominsert 0.0.1 Changelog
+====================
+
+Features
+===========
+
+- Insert anything you defined in cursor or start position
+- copyright/html/signature/datetime are pre-defined mapping 4 shortcut keys
+
+Contact
+===========
+- yanni4night@gmail.com
