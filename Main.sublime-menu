@@ -29,13 +29,13 @@
             [
               {
                 "command": "open_file",
-                "args": {"file": "${packages}/Custominsert/README.md"},
+                "args": {"file": "${packages}/Custom Insert/README.md"},
                 "caption": "README"
               },
               { "caption": "-" },
               {
                 "command": "open_file",
-                "args": {"file": "${packages}/Custominsert/Custominsert.sublime-settings"},
+                "args": {"file": "${packages}/Custom Insert/Custominsert.sublime-settings"},
                 "caption": "Settings – Default"
               },
               {
