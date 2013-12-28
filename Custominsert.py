@@ -56,7 +56,7 @@ class CustominsertCommand(sublime_plugin.TextCommand):
                     ips+=e
             return ips
         elif key=='user':
-            user=os.getlogin()
+            user=os.getlogin() if 'windows' != sublime.platform() else ''
             if user:
                 return user
                 #windows?
