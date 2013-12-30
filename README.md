@@ -63,11 +63,12 @@ pre-defined vars
  - arch : 'x32' or 'x64'
  - ext : file ext(without '.',may be empty)
  - ip : IP address(may be 'localhost')
- - encoding : file encoding(may be Undefined)
+ - encoding : file encoding(may be Undefined),you can use 'default_encoding' to override Undefined value
  - user : name of the user logged in
  
 changelog
 ===========
+ - 2013-12-30:default_encoding supported
  - 2013-11-19:menus supported.
  - 2013-11-15:{{}} syntax supported;position custom define supported;multiple actions&position insert supported,more pre-defined supported.
  - 2013-11-14:{%%} syntax supported.

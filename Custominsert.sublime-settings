@@ -4,6 +4,7 @@
         "version": "0.0.1"/*default version*/
     },
     "content": "default content",
+    "default_encoding":"UTF-8",
     /*cursor|start*/
     "position": "cursor",
     "datetime_format": "%Y-%m-%d[%H:%M:%S]",

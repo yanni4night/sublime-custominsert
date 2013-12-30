@@ -43,7 +43,8 @@ class CustominsertCommand(sublime_plugin.TextCommand):
         elif key=='arch':
             return sublime.arch()
         elif key=='encoding':
-            return self.view.encoding()
+            encoding = self.view.encoding()
+            return encoding if 'Undefined' != encoding else self.settings.get('default_encoding')
         elif key=='ip':
             return get_local_ip()
             ipaddrlist=socket.gethostbyname_ex(socket.gethostname())
