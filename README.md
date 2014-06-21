@@ -68,6 +68,7 @@ pre-defined vars
  
 changelog
 ===========
+ - 2014-06-21:modified settings
  - 2013-12-30:default_encoding supported
  - 2013-11-19:menus supported.
  - 2013-11-15:{{}} syntax supported;position custom define supported;multiple actions&position insert supported,more pre-defined supported.

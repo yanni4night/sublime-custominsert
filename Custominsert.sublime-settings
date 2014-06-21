@@ -1,7 +1,7 @@
 {
     "data": {
         "author": "yanni4night",/*default author*/
-        "version": "0.0.1"/*default version*/
+        "version": "0.1.0"/*default version*/
     },
     "content": "default content",
     "default_encoding":"UTF-8",
@@ -15,17 +15,17 @@
             "position": "cursor"
         },
         "copyright": {
-            "content": "/**\n  * {%filename%}\n  *\n  * changelog\n  * {%datetime%}:created\n  *\n  * @info {%user%},{%platform%}-{%arch%},{%encoding%},{%ip%},{%ext%},{%dirname%}\n  * @author {{author}}\n  * @version {{version}}\n  * @since {{version}}\n  */\n",
+            "content": "/**\n  * Copyright (C) 2014 yanni4night.com\n  * {%filename%}\n  *\n  * changelog\n  * {%datetime%}:authorized\n  *\n  * @author {{author}}\n  * @version {{version}}\n  * @since {{version}}\n  */\n",
             "position": "start",
             "data":{
                 "author":"yanni4night@gmail.com"
             }
         },
         "html":{
-            "content":"<!DOCTYPE html>\n<html>\n<head>\n<meta charset=\"{{charset}}\"/>\n<title>{{title}}</title>\n<script type=\"application/javascript\"></script>\n<style type=\"text/css\"></style>\n</head>\n<body></body>\n</html>\n",
+            "content":"<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"{{charset}}\"/>\n    <title>{{title}}</title>\n    <style type=\"text/css\"></style>\n  </head>\n  <body>\n</body>\n<script type=\"text/javascript\"></script>\n</html>\n",
             "position":"start",
             "data":{
-                "title":"Auto Insert",
+                "title":"Demo",
                 "charset":"utf-8"
             }
         },
