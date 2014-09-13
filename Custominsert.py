@@ -12,6 +12,9 @@ PLUGIN_NAME = 'Custominsert'
 
 
 def get_settings():
+    '''
+    read sublime-settings file
+    '''
     global SETTINGS
     global PLUGIN_NAME
     return sublime.load_settings(PLUGIN_NAME + '.sublime-settings')
@@ -23,24 +26,40 @@ def plugin_loaded():
     '''
     global PLUGIN_NAME
     SETTINGS = get_settings()
-    cmdHandle = open(PLUGIN_NAME + '.sublime-commands','w')
-    menuHandle = open('Context.sublime-menu','w')
-    
-    commands = []
-    menus = []
-    
     actions = SETTINGS.get('actions') or {}
-    
-    for action in actions.keys():
-        if action is not '':
-            commands.append({ "caption": "Insert " + action.capitalize(), "command": "custominsert","args":{"action": action} })
-            menus.append({"id": "insert_" + action,"command": "custominsert","args": {"action": action},"caption": "Insert " + action.capitalize()})
+    action_keys = actions.keys() or []
 
-    cmdHandle.write(json.dumps(commands,indent = 4))
-    cmdHandle.close()
-    menuHandle.write(json.dumps(commands,indent = 4))
-    menuHandle.close()
+    if SETTINGS.get('auto_generate_context_menus'):
+        menus = []
+        for action in action_keys:
+            if action is not '':
+                menus.append({"id": "custominsert_" + action,"command": "custominsert","args": {"action": action},"caption": "Insert " + action.capitalize()})
+        #update menu profile safely
+        try:
+            try:
+                menuHandle = open('Context.sublime-menu','w')
+                menuHandle.write(json.dumps(menus,indent = 4))
+            finally:
+                menuHandle.close()
+        except:
+            pass
 
+    if SETTINGS.get('auto_generate_commands'):
+        commands = []
+        for action in action_keys:
+            if action is not '':
+                commands.append({ "caption": "Insert " + action.capitalize(), "command": "custominsert","args":{"action": action} })
+        #update commands profile safely
+        try:
+            try:
+                cmdHandle = open(PLUGIN_NAME + '.sublime-commands','w')
+                cmdHandle.write(json.dumps(commands,indent = 4))
+            finally:
+                cmdHandle.close()
+        except:
+            pass
+
+#load at first
 plugin_loaded()
 
 def get_local_ip():

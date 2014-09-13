@@ -4,27 +4,31 @@
         "args": {
             "action": "me"
         }, 
-        "command": "custominsert"
+        "command": "custominsert", 
+        "id": "custominsert_me"
     }, 
     {
         "caption": "Insert Html", 
         "args": {
             "action": "html"
         }, 
-        "command": "custominsert"
+        "command": "custominsert", 
+        "id": "custominsert_html"
     }, 
     {
         "caption": "Insert Copyright", 
         "args": {
             "action": "copyright"
         }, 
-        "command": "custominsert"
+        "command": "custominsert", 
+        "id": "custominsert_copyright"
     }, 
     {
         "caption": "Insert Datetime", 
         "args": {
             "action": "datetime"
         }, 
-        "command": "custominsert"
+        "command": "custominsert", 
+        "id": "custominsert_datetime"
     }
 ]

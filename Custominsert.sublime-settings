@@ -5,9 +5,10 @@
         "vendor":"yanni4night.com"
     },
     "content": "This is inserted by sublime-custom-insert",
-    "default_encoding":"UTF-8",
-    /*cursor|start*/
-    "position": "cursor",
+    "default_encoding": "UTF-8",
+    "auto_generate_context_menus": true,
+    "auto_generate_commands": true,
+    "position": "cursor",/*cursor|start*/
     "datetime_format": "%Y-%m-%d[%H:%M:%S]",
     /*custom actions*/
     "actions": {
@@ -16,7 +17,7 @@
             "position": "cursor"
         },
         "copyright": {
-            "content": "/**\n  * Copyright (C) 2014 {{vendor}}\n  * {%filename%}\n  *\n  * changelog\n  * {%datetime%}:authorized\n  *\n  * @author {{author}}\n  * @version {{version}}\n  * @since {{version}}\n  */\n",
+            "content": "/**\n  * Copyright (C) 2014 {{vendor}}\n  * {%filename%}\n  *\n  * changelog\n  * {%datetime%}:revised\n  *\n  * @author {{author}}\n  * @version {{version}}\n  * @since {{version}}\n  */\n",
             "position": "start",
             "data":{
                 "author":"yanni4night@gmail.com"
