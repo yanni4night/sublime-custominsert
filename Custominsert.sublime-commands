@@ -1,27 +1,27 @@
 [
     {
-        "caption": "Insert me", 
+        "caption": "Insert Me", 
         "args": {
             "action": "me"
         }, 
         "command": "custominsert"
     }, 
     {
-        "caption": "Insert html", 
+        "caption": "Insert Html", 
         "args": {
             "action": "html"
         }, 
         "command": "custominsert"
     }, 
     {
-        "caption": "Insert copyright", 
+        "caption": "Insert Copyright", 
         "args": {
             "action": "copyright"
         }, 
         "command": "custominsert"
     }, 
     {
-        "caption": "Insert datetime", 
+        "caption": "Insert Datetime", 
         "args": {
             "action": "datetime"
         }, 

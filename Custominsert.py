@@ -1,19 +1,30 @@
 #Custominsert.py
 #
 #author yanni4night@gmail.com
-#datetime 2013-11-15 14:22:57
-#version 0.0.1
+#datetime 2013-11-15[14:22:57]
+#update   2014-09-13[17:41:53]
+#version 0.0.2
 
 import sublime, sublime_plugin
 import re,datetime,os,socket,json
 
 PLUGIN_NAME = 'Custominsert'
 
-SETTINGS = ''
+
+def get_settings():
+    global SETTINGS
+    global PLUGIN_NAME
+    return sublime.load_settings(PLUGIN_NAME + '.sublime-settings')
+
 def plugin_loaded():
-    SETTINGS = sublime.load_settings(PLUGIN_NAME + '.sublime-settings')
-    cmdHandle = open (PLUGIN_NAME + '.sublime-commands','w')
-    menuHandle = open ('Context.sublime-menu','w')
+    '''
+    This function should be called when plugin loaded.
+    It generate context menus and commands automatically.
+    '''
+    global PLUGIN_NAME
+    SETTINGS = get_settings()
+    cmdHandle = open(PLUGIN_NAME + '.sublime-commands','w')
+    menuHandle = open('Context.sublime-menu','w')
     
     commands = []
     menus = []
@@ -21,8 +32,9 @@ def plugin_loaded():
     actions = SETTINGS.get('actions') or {}
     
     for action in actions.keys():
-        commands.append({ "caption": "Insert " + action, "command": "custominsert","args":{"action": action} })
-        menus.append({"id": "insert_" + action,"command": "custominsert","args": {"action": action},"caption": "Insert " + action})
+        if action is not '':
+            commands.append({ "caption": "Insert " + action.capitalize(), "command": "custominsert","args":{"action": action} })
+            menus.append({"id": "insert_" + action,"command": "custominsert","args": {"action": action},"caption": "Insert " + action.capitalize()})
 
     cmdHandle.write(json.dumps(commands,indent = 4))
     cmdHandle.close()
@@ -107,11 +119,10 @@ class CustominsertCommand(sublime_plugin.TextCommand):
         return self.get_settings_param(['actions',self.action,key],self.get_settings_param([key]))
 
     def run(self, edit,action = ''):
+        global SETTINGS
         v = self.view
-        settings_name = 'Custominsert'
-        settings =sublime.load_settings(settings_name + '.sublime-settings') or {}
         #save settings
-        self.settings = settings
+        self.settings = get_settings()
         #save action
         self.action = action;
         content = self.get_action_param('content')
