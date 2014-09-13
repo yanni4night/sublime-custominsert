@@ -3,7 +3,7 @@
         "author": "yanni4night",/*default author*/
         "version": "0.1.0"/*default version*/
     },
-    "content": "default content",
+    "content": "This is inserted by sublime-custom-insert",
     "default_encoding":"UTF-8",
     /*cursor|start*/
     "position": "cursor",

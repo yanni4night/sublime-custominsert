@@ -5,8 +5,31 @@
 #version 0.0.1
 
 import sublime, sublime_plugin
-import re,datetime,os,socket
+import re,datetime,os,socket,json
 
+PLUGIN_NAME = 'Custominsert'
+
+SETTINGS = ''
+def plugin_loaded():
+    SETTINGS = sublime.load_settings(PLUGIN_NAME + '.sublime-settings')
+    cmdHandle = open (PLUGIN_NAME + '.sublime-commands','w')
+    menuHandle = open ('Context.sublime-menu','w')
+    
+    commands = []
+    menus = []
+    
+    actions = SETTINGS.get('actions') or {}
+    
+    for action in actions.keys():
+        commands.append({ "caption": "Insert " + action, "command": "custominsert","args":{"action": action} })
+        menus.append({"id": "insert_" + action,"command": "custominsert","args": {"action": action},"caption": "Insert " + action})
+
+    cmdHandle.write(json.dumps(commands,indent = 4))
+    cmdHandle.close()
+    menuHandle.write(json.dumps(commands,indent = 4))
+    menuHandle.close()
+
+plugin_loaded()
 
 def get_local_ip():
     '''Stupid way to get IP address'''
