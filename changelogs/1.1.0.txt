@@ -1,0 +1,12 @@
+Custominsert 1.1.0 Changelog
+====================
+
+Features
+===========
+
+- Support auto generate commands/context-menus
+- Add two options "auto_generate_context_menus"/"auto_generate_commands" to enable/disable commands/context-menus auto-generating
+
+Contact
+===========
+- yanni4night@gmail.com
