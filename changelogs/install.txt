@@ -1,0 +1,15 @@
+Thank you for installing custominsert -- a simple plugin to insert multiple format text.
+
+
+************************************
+Please restart editor to re-generate
+command&menus profile after modifying
+sublime settings.
+************************************
+
+For more usage and details,please see:
+https://github.com/yanni4night/sublime-custominsert
+
+------------------------------
+Follow me on Weibo: @yinyongcom666
+------------------------------

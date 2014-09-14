@@ -1,4 +1,4 @@
-Custominsert 0.0.1 Changelog
+Custominsert 1.0.0 Changelog
 ====================
 
 Features

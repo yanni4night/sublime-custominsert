@@ -1,12 +1,66 @@
 #Custominsert.py
 #
 #author yanni4night@gmail.com
-#datetime 2013-11-15 14:22:57
-#version 0.0.1
+#datetime 2013-11-15[14:22:57]
+#update   2014-09-13[17:41:53]
+#version 0.0.2
 
 import sublime, sublime_plugin
-import re,datetime,os,socket
+import re,datetime,os,socket,json
 
+PLUGIN_NAME = 'Custominsert'
+
+
+def get_settings():
+    '''
+    read sublime-settings file
+    '''
+    global SETTINGS
+    global PLUGIN_NAME
+    return sublime.load_settings(PLUGIN_NAME + '.sublime-settings')
+
+def plugin_loaded():
+    '''
+    This function should be called when plugin loaded.
+    It generate context menus and commands automatically.
+    '''
+    global PLUGIN_NAME
+    SETTINGS = get_settings()
+    actions = SETTINGS.get('actions') or {}
+    action_keys = actions.keys() or []
+
+    if SETTINGS.get('auto_generate_context_menus'):
+        menus = []
+        for action in action_keys:
+            if action is not '':
+                menus.append({"id": "custominsert_" + action,"command": "custominsert","args": {"action": action},"caption": "Insert " + action.capitalize()})
+        #update menu profile safely
+        try:
+            try:
+                menuHandle = open('Context.sublime-menu','w')
+                menuHandle.write(json.dumps(menus,indent = 4))
+            finally:
+                menuHandle.close()
+        except:
+            pass
+
+    if SETTINGS.get('auto_generate_commands'):
+        commands = []
+        for action in action_keys:
+            if action is not '':
+                commands.append({ "caption": "Insert " + action.capitalize(), "command": "custominsert","args":{"action": action} })
+        #update commands profile safely
+        try:
+            try:
+                cmdHandle = open(PLUGIN_NAME + '.sublime-commands','w')
+                cmdHandle.write(json.dumps(commands,indent = 4))
+            finally:
+                cmdHandle.close()
+        except:
+            pass
+
+#load at first
+plugin_loaded()
 
 def get_local_ip():
     '''Stupid way to get IP address'''
@@ -84,11 +138,10 @@ class CustominsertCommand(sublime_plugin.TextCommand):
         return self.get_settings_param(['actions',self.action,key],self.get_settings_param([key]))
 
     def run(self, edit,action = ''):
+        global SETTINGS
         v = self.view
-        settings_name = 'Custominsert'
-        settings =sublime.load_settings(settings_name + '.sublime-settings') or {}
         #save settings
-        self.settings = settings
+        self.settings = get_settings()
         #save action
         self.action = action;
         content = self.get_action_param('content')

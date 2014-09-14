@@ -20,7 +20,7 @@ _Custominsert.sublime-keymap:_
         /*Default content*/
         "content":"Nohting to insert",
         
-        /*Default date_format*/
+        /*Default date_format,see https://docs.python.org/2/library/datetime.html#strftime-and-strptime-behavior*/
         "date_format":"%Y-%m-%d %H:%M:%S",
         
         /*Default insert position*/
@@ -68,6 +68,7 @@ pre-defined vars
  
 changelog
 ===========
+ - 2014-09-13:generate menus&commands automatically
  - 2014-06-21:modified settings
  - 2013-12-30:default_encoding supported
  - 2013-11-19:menus supported.
