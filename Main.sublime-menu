@@ -3,11 +3,11 @@
         "id": "edit",
         "children":
         [
-            {"id": "custom_insert","caption":"Custominsert" ,"children":[
+            {"id": "custom_insert","caption":"InsertCustom" ,"children":[
               {"command":"custominsert","caption":"Copyright","args":{"action":"copyright"}},
-              {"command":"custominsert","caption":"HTML Stub","args":{"action":"html"}},
-              {"command":"custominsert","caption":"Date&time","args":{"action":"datetime"}},
-              {"command":"custominsert","caption":"Signature","args":{"action":"me"}}
+              {"command":"custominsert","caption":"HTML","args":{"action":"html"}},
+              {"command":"custominsert","caption":"Datetime","args":{"action":"datetime"}},
+              {"command":"custominsert","caption":"Me","args":{"action":"me"}}
             ]}
         ]
     },

@@ -1,6 +1,6 @@
 [
     {
-        "caption": "Insert Me", 
+        "caption": "InsertCustom Me", 
         "args": {
             "action": "me"
         }, 
@@ -8,7 +8,7 @@
         "id": "custominsert_me"
     }, 
     {
-        "caption": "Insert Html", 
+        "caption": "InsertCustom Html", 
         "args": {
             "action": "html"
         }, 
@@ -16,7 +16,7 @@
         "id": "custominsert_html"
     }, 
     {
-        "caption": "Insert Copyright", 
+        "caption": "InsertCustom Copyright", 
         "args": {
             "action": "copyright"
         }, 
@@ -24,7 +24,7 @@
         "id": "custominsert_copyright"
     }, 
     {
-        "caption": "Insert Datetime", 
+        "caption": "InsertCustom Datetime", 
         "args": {
             "action": "datetime"
         }, 
