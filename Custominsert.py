@@ -33,7 +33,7 @@ def plugin_loaded():
         menus = []
         for action in action_keys:
             if action is not '':
-                menus.append({"id": "custominsert_" + action,"command": "custominsert","args": {"action": action},"caption": "Insert " + action.capitalize()})
+                menus.append({"id": "custominsert_" + action,"command": "custominsert","args": {"action": action},"caption": "InsertCustom " + action.capitalize()})
         #update menu profile safely
         try:
             try:
@@ -48,7 +48,7 @@ def plugin_loaded():
         commands = []
         for action in action_keys:
             if action is not '':
-                commands.append({ "caption": "Insert " + action.capitalize(), "command": "custominsert","args":{"action": action} })
+                commands.append({ "caption": "InsertCustom  " + action.capitalize(), "command": "custominsert","args":{"action": action} })
         #update commands profile safely
         try:
             try:
