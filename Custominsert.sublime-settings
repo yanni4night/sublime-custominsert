@@ -17,7 +17,7 @@
             "position": "cursor"
         },
         "copyright": {
-            "content": "/**\n  * Copyright (C) 2014 {{vendor}}\n  * {%filename%}\n  *\n  * changelog\n  * {%datetime%}:revised\n  *\n  * @author {{author}}\n  * @version {{version}}\n  * @since {{version}}\n  */\n",
+            "content": "/**\n  * Copyright (C) 2015 {{vendor}}\n  * {%filename%}\n  *\n  * changelog\n  * {%datetime%}:revised\n  *\n  * @author {{author}}\n  * @version {{version}}\n  * @since {{version}}\n  */\n",
             "position": "start",
             "data":{
                 "author":"yanni4night@gmail.com"
