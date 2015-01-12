@@ -68,7 +68,7 @@ def get_local_ip():
         s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
         s.connect(('w3.org',80))
         return s.getsockname()[0]
-    except Exception, e:
+    except:
         return '127.0.0.1'
 
 
