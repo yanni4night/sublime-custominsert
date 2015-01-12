@@ -1,7 +1,9 @@
 sublime-custominsert
 ====================
 
-A [Sublime 2](http://www.sublimetext.com/2) plugin that can easily insert custom content.It inserts 'copyright',code template,signature,date time or anything else as you want.I assume that you know how to use and configure [Sublime 2](http://www.sublimetext.com/2).It has not been tested on [Sublime 3](http://www.sublimetext.com/3).
+A [Sublime](http://www.sublimetext.com/) plugin that can easily insert custom content.It can insert 'copyright',code template,signature,date time or anything else as you want.
+
+Now `Sublime 3` is supported.
 
 
 install
@@ -68,6 +70,7 @@ pre-defined vars
  
 changelog
 ===========
+ - 2015-01-12:sublime 3 is supported
  - 2014-09-13:generate menus&commands automatically
  - 2014-06-21:modified settings
  - 2013-12-30:default_encoding supported

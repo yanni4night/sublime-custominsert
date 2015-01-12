@@ -1,0 +1,4 @@
+Custominsert 1.2.1 Changelog
+==================
+
+Support both sublime 2 and 3.

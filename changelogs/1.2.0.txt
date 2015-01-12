@@ -1,4 +1,4 @@
-Custominsert 1.1.0 Changelog
+Custominsert 1.2.0 Changelog
 ==================
 
 Use a better command name prefix as in #3.
