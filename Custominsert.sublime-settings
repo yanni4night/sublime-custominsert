@@ -17,9 +17,13 @@
             "position": "cursor"
         },
         "copyright": {
-            "content": "/**\n  * Copyright (C) 2015 {{vendor}}\n  * {%filename%}\n  *\n  * changelog\n  * {%datetime%}:revised\n  *\n  * @author {{author}}\n  * @version {{version}}\n  * @since {{version}}\n  */\n",
+            "content": {
+                "default": "/**\n  * Copyright (C) 2015 {{vendor}}\n  * {%filename%}\n  *\n  * changelog\n  * {%datetime%}:revised\n  *\n  * @author {{author}}\n  * @version {{version}}\n  * @since {{version}}\n  */\n",
+                "php": "<?php\n/**\n  * Copyright (C) 2015 {{vendor}}\n  * {%filename%}\n  *\n  * changelog\n  * {%datetime%}:revised\n  *\n  * @author {{author}}\n  * @version {{version}}\n  * @since {{version}}\n  */\n?>",
+                "py": "# Copyright (C) 2015 {{vendor}}\n# {%filename%}\n#\n# changelog\n# {%datetime%}:revised\n#\n# @author {{author}}\n# @version {{version}}\n# @since {{version}}\n#\n"
+            },
             "position": "start",
-            "data":{
+            "data": {
                 "author":"yanni4night@gmail.com"
             }
         },

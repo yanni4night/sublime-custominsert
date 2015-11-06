@@ -71,6 +71,11 @@ def get_local_ip():
     except:
         return '127.0.0.1'
 
+def get_ext(filename):
+    ext = os.path.splitext(filename or '')[1]
+    #remove . at start position
+    p = re.compile('^\.')
+    return re.sub(p, '', ext)
 
 class CustominsertCommand(sublime_plugin.TextCommand):
 
@@ -101,15 +106,6 @@ class CustominsertCommand(sublime_plugin.TextCommand):
             return encoding if 'Undefined' != encoding else self.settings.get('default_encoding')
         elif key == 'ip':
             return get_local_ip()
-            ipaddrlist = socket.gethostbyname_ex(socket.gethostname())
-            ips = ''
-            for e in ipaddrlist:
-                if isinstance(e, list):
-                    for k in e:
-                        ips += " " + k
-                else:
-                    ips += e
-            return ips
         elif key == 'user':
             user = os.getlogin() if 'windows' != sublime.platform() else ''
             if user:
@@ -119,10 +115,7 @@ class CustominsertCommand(sublime_plugin.TextCommand):
             p = re.compile('[\r\n]', re.M)
             return re.sub(p, '', user)
         elif key == 'ext':
-            ext = os.path.splitext(self.view.file_name() or '')[1]
-            #remove . at start position
-            p = re.compile('^\.')
-            return re.sub(p, '', ext)
+            return get_ext(self.view.file_name())
         elif key == 'datetime':
             t = datetime.datetime.today()  
             return t.strftime(self.get_action_param('datetime_format', '%Y-%m-%d %H:%M:%S'))
@@ -145,6 +138,15 @@ class CustominsertCommand(sublime_plugin.TextCommand):
         #save action
         self.action = action;
         content = self.get_action_param('content')
+
+        if isinstance(content, dict):
+            fext = get_ext(self.view.file_name())
+            default_content = content.get('default')
+            for ext in content:
+                if ext == fext:
+                    default_content = content.get(ext) or default_content
+                    break
+            content = default_content
         #replace {%%}
         p = re.compile('\{%\s*?([\w]+)\s*?%\}', re.LOCALE | re.MULTILINE)
         content = re.sub(p, self.get_predefined_param, content)
