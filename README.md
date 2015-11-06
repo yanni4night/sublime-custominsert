@@ -34,7 +34,11 @@ _Custominsert.sublime-keymap:_
         		"content":"{%datetime%}"
         	},
         	"copyright":{
-        		"content":"/**\n  * {%file_name%}\n  *\n  * @author {{author}}\n  * @datetime {%datetime%}\n  * @version {{version}}\n  */\n",
+        		"content": {
+                    "default": "/*{{author}}*/",
+                    "php": "<?php{{author}}?>",
+                    "py": "#php{{author}}",
+                },
         		"data":{
         			"author":"yanni4night",
         			"version":"0.0.1"
@@ -70,6 +74,7 @@ pre-defined vars
  
 changelog
 ===========
+ - 2015-11-06:content by file ext is supported
  - 2015-01-12:sublime 3 is supported
  - 2014-09-13:generate menus&commands automatically
  - 2014-06-21:modified settings
