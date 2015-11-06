@@ -61,6 +61,7 @@ syntax
  
 pre-defined vars
 ===========
+ - year : current year
  - filename : file name with ext
  - dirname : absolute directory path
  - filepath : absolute file path
@@ -74,7 +75,7 @@ pre-defined vars
  
 changelog
 ===========
- - 2015-11-06:content by file ext is supported
+ - 2015-11-06:content by file ext is supported,'year' supported
  - 2015-01-12:sublime 3 is supported
  - 2014-09-13:generate menus&commands automatically
  - 2014-06-21:modified settings

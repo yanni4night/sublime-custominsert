@@ -116,8 +116,11 @@ class CustominsertCommand(sublime_plugin.TextCommand):
             return re.sub(p, '', user)
         elif key == 'ext':
             return get_ext(self.view.file_name())
+        elif key == 'year':
+            t = datetime.datetime.today()
+            return t.strftime('%Y')
         elif key == 'datetime':
-            t = datetime.datetime.today()  
+            t = datetime.datetime.today()
             return t.strftime(self.get_action_param('datetime_format', '%Y-%m-%d %H:%M:%S'))
         return match.group(1)
 

@@ -18,9 +18,9 @@
         },
         "copyright": {
             "content": {
-                "default": "/**\n  * Copyright (C) 2015 {{vendor}}\n  * {%filename%}\n  *\n  * changelog\n  * {%datetime%}:revised\n  *\n  * @author {{author}}\n  * @version {{version}}\n  * @since {{version}}\n  */\n",
-                "php": "<?php\n/**\n  * Copyright (C) 2015 {{vendor}}\n  * {%filename%}\n  *\n  * changelog\n  * {%datetime%}:revised\n  *\n  * @author {{author}}\n  * @version {{version}}\n  * @since {{version}}\n  */\n?>",
-                "py": "# Copyright (C) 2015 {{vendor}}\n# {%filename%}\n#\n# changelog\n# {%datetime%}:revised\n#\n# @author {{author}}\n# @version {{version}}\n# @since {{version}}\n#\n"
+                "default": "/**\n  * Copyright (C) {%year%} {{vendor}}\n  * {%filename%}\n  *\n  * changelog\n  * {%datetime%}:revised\n  *\n  * @author {{author}}\n  * @version {{version}}\n  * @since {{version}}\n  */\n",
+                "php": "<?php\n/**\n  * Copyright (C) {%year%} {{vendor}}\n  * {%filename%}\n  *\n  * changelog\n  * {%datetime%}:revised\n  *\n  * @author {{author}}\n  * @version {{version}}\n  * @since {{version}}\n  */\n?>",
+                "py": "# Copyright (C) {%year%} {{vendor}}\n# {%filename%}\n#\n# changelog\n# {%datetime%}:revised\n#\n# @author {{author}}\n# @version {{version}}\n# @since {{version}}\n#\n"
             },
             "position": "start",
             "data": {
