@@ -1,0 +1,4 @@
+Custominsert 1.4.0 Changelog
+==================
+
+Fixed writing .sublime-menus and .sublime-commands

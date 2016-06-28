@@ -1,52 +1,65 @@
-[
- {
-        "id": "edit",
-        "children":
-        [
-            {"id": "custom_insert","caption":"InsertCustom" ,"children":[
-              {"command":"custominsert","caption":"Copyright","args":{"action":"copyright"}},
-              {"command":"custominsert","caption":"HTML","args":{"action":"html"}},
-              {"command":"custominsert","caption":"Datetime","args":{"action":"datetime"}},
-              {"command":"custominsert","caption":"Me","args":{"action":"me"}}
-            ]}
-        ]
-    },
-  {
+[{
+    "id": "edit",
+    "children": [{
+        "id": "custom_insert",
+        "caption": "InsertCustom",
+        "children": [{
+            "command": "custominsert",
+            "caption": "Copyright",
+            "args": {
+                "action": "copyright"
+            }
+        }, {
+            "command": "custominsert",
+            "caption": "HTML",
+            "args": {
+                "action": "html"
+            }
+        }, {
+            "command": "custominsert",
+            "caption": "Datetime",
+            "args": {
+                "action": "datetime"
+            }
+        }, {
+            "command": "custominsert",
+            "caption": "Me",
+            "args": {
+                "action": "me"
+            }
+        }]
+    }]
+}, {
     "caption": "Preferences",
     "mnemonic": "n",
     "id": "preferences",
-    "children":
-    [
-      {
+    "children": [{
         "caption": "Package Settings",
         "mnemonic": "P",
         "id": "package-settings",
-        "children":
-        [
-          {
+        "children": [{
             "caption": "Custominsert",
-            "children":
-            [
-              {
+            "children": [{
                 "command": "open_file",
-                "args": {"file": "${packages}/Custom Insert/README.md"},
+                "args": {
+                    "file": "${packages}/Custom Insert/README.md"
+                },
                 "caption": "README"
-              },
-              { "caption": "-" },
-              {
+            }, {
+                "caption": "-"
+            }, {
                 "command": "open_file",
-                "args": {"file": "${packages}/Custom Insert/Custominsert.sublime-settings"},
+                "args": {
+                    "file": "${packages}/Custom Insert/Custominsert.sublime-settings"
+                },
                 "caption": "Settings – Default"
-              },
-              {
+            }, {
                 "command": "open_file",
-                "args": {"file": "${packages}/User/Custominsert.sublime-settings"},
+                "args": {
+                    "file": "${packages}/User/Custominsert.sublime-settings"
+                },
                 "caption": "Settings – User"
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  }
-]
+            }]
+        }]
+    }]
+}]

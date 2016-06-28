@@ -1,4 +1,4 @@
 Custominsert 1.3.0 Changelog
 ==================
 
-Support different templatse for different file extensions.
+Support different templates for different file extensions.

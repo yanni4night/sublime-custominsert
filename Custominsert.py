@@ -3,13 +3,15 @@
 #author yanni4night@gmail.com
 #datetime 2013-11-15[14:22:57]
 #update   2014-09-13[17:41:53]
-#version 0.0.2
+#update   2016-06-28[11:46:05]
+#version 1.4.0
 
 import sublime, sublime_plugin
-import re,datetime,os,socket,json
+import re, datetime, os, socket, json
 
 PLUGIN_NAME = 'Custominsert'
 
+DIRNAME = os.path.dirname(os.path.realpath(__file__));
 
 def get_settings():
     '''
@@ -34,10 +36,11 @@ def plugin_loaded():
         for action in action_keys:
             if action is not '':
                 menus.append({"id": "custominsert_" + action,"command": "custominsert","args": {"action": action},"caption": "InsertCustom " + action.capitalize()})
+        print(json.dumps(menus))
         #update menu profile safely
         try:
             try:
-                menuHandle = open('Context.sublime-menu','w')
+                menuHandle = open(DIRNAME + '/Context.sublime-menu', 'w')
                 menuHandle.write(json.dumps(menus, indent = 4))
             finally:
                 menuHandle.close()
@@ -48,11 +51,11 @@ def plugin_loaded():
         commands = []
         for action in action_keys:
             if action is not '':
-                commands.append({ "caption": "InsertCustom  " + action.capitalize(), "command": "custominsert","args":{"action": action} })
+                commands.append({"caption": "InsertCustom  " + action.capitalize(), "command": "custominsert","args":{"action": action} })
         #update commands profile safely
         try:
             try:
-                cmdHandle = open(PLUGIN_NAME + '.sublime-commands','w')
+                cmdHandle = open(DIRNAME + '/' + PLUGIN_NAME + '.sublime-commands','w')
                 cmdHandle.write(json.dumps(commands, indent = 4))
             finally:
                 cmdHandle.close()
