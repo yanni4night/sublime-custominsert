@@ -1,8 +1,8 @@
 {
     "data": {
         "author": "yanni4night",/*default author*/
-        "version": "0.1.0",/*default version*/
-        "vendor":"yanni4night.com"
+        "version": "1.0.0",/*default version*/
+        "vendor":"yanni4night.github.io"
     },
     "content": "This is inserted by sublime-custom-insert",
     "default_encoding": "UTF-8",
