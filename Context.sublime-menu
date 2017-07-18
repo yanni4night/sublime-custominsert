@@ -1,34 +1,34 @@
 [
     {
-        "caption": "InsertCustom Me", 
-        "args": {
-            "action": "me"
-        }, 
         "command": "custominsert", 
-        "id": "custominsert_me"
-    }, 
-    {
-        "caption": "InsertCustom Html", 
-        "args": {
-            "action": "html"
-        }, 
-        "command": "custominsert", 
-        "id": "custominsert_html"
-    }, 
-    {
-        "caption": "InsertCustom Copyright", 
-        "args": {
-            "action": "copyright"
-        }, 
-        "command": "custominsert", 
-        "id": "custominsert_copyright"
-    }, 
-    {
-        "caption": "InsertCustom Datetime", 
         "args": {
             "action": "datetime"
         }, 
+        "id": "custominsert_datetime", 
+        "caption": "InsertCustom Datetime"
+    }, 
+    {
         "command": "custominsert", 
-        "id": "custominsert_datetime"
+        "args": {
+            "action": "copyright"
+        }, 
+        "id": "custominsert_copyright", 
+        "caption": "InsertCustom Copyright"
+    }, 
+    {
+        "command": "custominsert", 
+        "args": {
+            "action": "html"
+        }, 
+        "id": "custominsert_html", 
+        "caption": "InsertCustom Html"
+    }, 
+    {
+        "command": "custominsert", 
+        "args": {
+            "action": "me"
+        }, 
+        "id": "custominsert_me", 
+        "caption": "InsertCustom Me"
     }
 ]
