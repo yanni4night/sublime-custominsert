@@ -1,34 +1,34 @@
 [
     {
-        "command": "custominsert", 
-        "args": {
-            "action": "datetime"
-        }, 
-        "id": "custominsert_datetime", 
-        "caption": "InsertCustom Datetime"
-    }, 
-    {
+        "id": "custominsert_copyright", 
         "command": "custominsert", 
         "args": {
             "action": "copyright"
         }, 
-        "id": "custominsert_copyright", 
         "caption": "InsertCustom Copyright"
     }, 
     {
+        "id": "custominsert_datetime", 
         "command": "custominsert", 
         "args": {
-            "action": "html"
+            "action": "datetime"
         }, 
-        "id": "custominsert_html", 
-        "caption": "InsertCustom Html"
+        "caption": "InsertCustom Datetime"
     }, 
     {
+        "id": "custominsert_me", 
         "command": "custominsert", 
         "args": {
             "action": "me"
         }, 
-        "id": "custominsert_me", 
         "caption": "InsertCustom Me"
+    }, 
+    {
+        "id": "custominsert_html", 
+        "command": "custominsert", 
+        "args": {
+            "action": "html"
+        }, 
+        "caption": "InsertCustom Html"
     }
 ]

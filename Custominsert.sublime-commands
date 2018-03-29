@@ -1,13 +1,6 @@
 [
     {
         "command": "custominsert", 
-        "caption": "InsertCustom  Datetime", 
-        "args": {
-            "action": "datetime"
-        }
-    }, 
-    {
-        "command": "custominsert", 
         "caption": "InsertCustom  Copyright", 
         "args": {
             "action": "copyright"
@@ -15,9 +8,9 @@
     }, 
     {
         "command": "custominsert", 
-        "caption": "InsertCustom  Html", 
+        "caption": "InsertCustom  Datetime", 
         "args": {
-            "action": "html"
+            "action": "datetime"
         }
     }, 
     {
@@ -25,6 +18,13 @@
         "caption": "InsertCustom  Me", 
         "args": {
             "action": "me"
+        }
+    }, 
+    {
+        "command": "custominsert", 
+        "caption": "InsertCustom  Html", 
+        "args": {
+            "action": "html"
         }
     }
 ]
